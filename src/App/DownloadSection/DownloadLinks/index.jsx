@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useInputContext } from '../contexts/InputContext'
 import styles from './styles.module.scss'
 
