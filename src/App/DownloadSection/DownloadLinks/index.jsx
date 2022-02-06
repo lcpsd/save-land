@@ -7,6 +7,8 @@ export function DownloadLinks(){
     const {downloadLinks} = useInputContext()
     const {link} = downloadLinks
 
+    console.log(link)
+
     const lowResLink = link["243"][0]
     const mediumResLink = link["244"][0]
     const highResLink = link["22"][0]
