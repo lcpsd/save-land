@@ -1,0 +1,25 @@
+:root{
+    --color-primary: #32FF00;
+    --color-secondary: #FAFF00;
+    --color-tertiary: #1F2529;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    border: 0;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
