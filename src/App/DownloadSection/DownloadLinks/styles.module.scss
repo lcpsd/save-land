@@ -1,4 +1,16 @@
 .downloadLink{
+
+    @keyframes fadeIn{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }        
+    }
+
+    animation: fadeIn 1s;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,6 +21,7 @@
     max-width: 500px;
 
     gap: 1rem;
+    
 
     h2{
         width: 100%;
