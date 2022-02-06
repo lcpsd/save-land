@@ -16,7 +16,13 @@ export function DownloadSection(){
 
                 {loading && <Loading/>}
 
-                {(!loading && downloadLinks) && <DownloadLinks/>}
+                {(!loading && downloadLinks.length) && <DownloadLinks/>}
+                
+                {(!loading && downloadLinks &&!downloadLinks.length) && 
+                    <>
+                        <div className={styles.error}>Can't Download This Video.</div>
+                    </>
+                }
 
             </div>
         </section>

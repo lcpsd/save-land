@@ -21,6 +21,16 @@
         align-items: center;
         justify-content: center;
 
+        .error{
+            background: red;
+            color: black;
+            font-weight: bold;
+
+            padding: 1rem;
+
+            border-radius: 0.3rem;
+        }
+
     }
 
 }
