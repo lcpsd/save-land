@@ -5,12 +5,13 @@ import styles from './styles.module.scss'
 
 export function DownloadSection(){
 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
+    const [links, setLinks] = useState(null)
 
     return(
         <section className={styles.downloadSection}>
             <div className={styles.container}>
-                
+                {(!loading && !links) && <InputLink/>}
                 {loading && <Loading/>}
 
             </div>
