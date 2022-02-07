@@ -36,50 +36,41 @@ export function DownloadLinks(){
                     <img src={thumb} alt={title} />
                     
                     <div>
-                        <a href={"#"} onClick={() => handleCopyLink(lowResLink)}>
-                            <button>
-                                360P
+                        <button onClick={() => handleCopyLink(lowResLink)}>
+                            360P
+                            <span>
+                                <MdOutlineContentCopy/>
+                            </span>
+                        </button>
+                        {
+                            mediumResLink && 
+                            <button onClick={() => handleCopyLink(mediumResLink)}>
+                                480P
                                 <span>
                                     <MdOutlineContentCopy/>
                                 </span>
                             </button>
-                        </a>
-
-                        {
-                            mediumResLink && 
-                            <a href={"#"} onClick={() => handleCopyLink(mediumResLink)}>
-                                <button>
-                                    480P
-                                    <span>
-                                        <MdOutlineContentCopy/>
-                                    </span>
-                                </button>
-                            </a>
                             }
 
                         {
                             highResLink &&
-                            <a href={"#"} onClick={() => handleCopyLink(highResLink)}>
-                                <button>
-                                    720P
-                                    <span>
-                                        <MdOutlineContentCopy/>
-                                    </span>
-                                </button>
-                            </a>
+                            <button onClick={() => handleCopyLink(highResLink)}>
+                                720P
+                                <span>
+                                    <MdOutlineContentCopy/>
+                                </span>
+                            </button>
                         }
 
                         { 
                             ultraResLink &&
-                            <a href={"#"} onClick={() => handleCopyLink(highResLink)}>
-                                <button>
-                                    1080P
-                                    <p>No Audio</p>
-                                    <span>
-                                        <MdOutlineContentCopy/>
-                                    </span>
-                                </button>
-                            </a>
+                            <button  onClick={() => handleCopyLink(highResLink)}>
+                                1080P
+                                <p>No Audio</p>
+                                <span>
+                                    <MdOutlineContentCopy/>
+                                </span>
+                            </button>
                         }
                     </div>
 
