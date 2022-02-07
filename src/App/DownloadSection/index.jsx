@@ -12,7 +12,7 @@ export function DownloadSection(){
         <section className={styles.downloadSection}>
             <div className={styles.container}>
 
-                {(!loading && !downloadLinks) && <InputLink/>}
+                {!loading && <InputLink/>}
 
                 {loading && <Loading/>}
 
