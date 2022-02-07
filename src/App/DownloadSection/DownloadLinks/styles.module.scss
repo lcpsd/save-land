@@ -93,17 +93,22 @@
                         filter: brightness(0.8);
                     }
 
+                    > p{
+                        font-size: 0.5rem;
+                    }
+
                     span{
                         display: flex;
                         align-items: center;
                         justify-content: center;
+
                     }
                 }
             }
         }
     }
 
-    p{
+    >p{
         background: var(--color-primary);
 
         width: 100%;
@@ -115,6 +120,8 @@
         font-weight: bold;
 
         color: var(--color-primary-dark);
+
+        font-size: 1rem;
     }
 }
 
