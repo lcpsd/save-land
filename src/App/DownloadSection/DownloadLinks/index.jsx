@@ -1,6 +1,7 @@
 import { useInputContext } from '../contexts/InputContext'
+import {MdOutlineContentCopy} from 'react-icons/md'
 import styles from './styles.module.scss'
-
+import { ToastContainer, toast } from 'react-toastify';
 
 export function DownloadLinks(){
 
@@ -16,32 +17,58 @@ export function DownloadLinks(){
     let title = downloadLinks["cleantitle"]
     title = title.replaceAll("_", " ")
 
+    const notify = (message) => toast.info(message)
+
+    function handleCopyLink(link){
+        navigator.clipboard.writeText(link)
+
+        notify("Link Copied.")
+    }
+
     return(
-        <div className={styles.downloadLink}>
-            <h2>Enjoy!</h2>
+        <>
+            <ToastContainer/>
+            <div className={styles.downloadLink}>
+                <h2>Enjoy!</h2>
 
-            <div>
-                <img src={thumb} alt={title} />
-                
                 <div>
-                    <a href={lowResLink}>
-                        <button>360P</button>
-                    </a>
+                    <img src={thumb} alt={title} />
+                    
+                    <div>
+                        <a href={"#"} onClick={() => handleCopyLink(lowResLink)}>
+                            <button>
+                                360P
+                                <span>
+                                    <MdOutlineContentCopy/>
+                                </span>
+                            </button>
+                        </a>
 
-                    <a href={mediumResLink}>
-                        <button>480P</button>
-                    </a>
+                        <a href={"#"} onClick={() => handleCopyLink(mediumResLink)}>
+                            <button>
+                                480P
+                                <span>
+                                    <MdOutlineContentCopy/>
+                                </span>
+                            </button>
+                        </a>
 
-                    <a href={highResLink}>
-                        <button>720P</button>
-                    </a>
+                        <a href={"#"} onClick={() => handleCopyLink(highResLink)}>
+                            <button>
+                                720P
+                                <span>
+                                    <MdOutlineContentCopy/>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+
                 </div>
 
+                <p>
+                    {title}
+                </p>
             </div>
-
-            <p>
-                {title}
-            </p>
-        </div>
+        </>
     )
 }

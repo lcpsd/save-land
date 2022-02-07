@@ -85,8 +85,18 @@
 
                     transition: filter 0.2s ease-in-out;
 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    
                     &:hover{
                         filter: brightness(0.8);
+                    }
+
+                    span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             }
