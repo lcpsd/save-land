@@ -19,4 +19,4 @@ http://saveland.netlify.app/
 - Type: git clone https://github.com/lcpsd/save-land.git
 - Type: cd ./save-land
 - Type: yarn
-- Type: yarn dev
+- Type: yarn start
